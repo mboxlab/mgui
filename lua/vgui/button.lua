@@ -4,7 +4,7 @@ function PANEL:Init()
     self:SetMinimumSize( 64, 40 )
 
     self:SetFont( "mgui_small" )
-    self:SetTextColor(color_white)
+    self:SetTextColor( color_white )
 
     self.vg_alpha, self.vg_bar = 0, 0
 end
