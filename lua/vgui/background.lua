@@ -36,29 +36,42 @@ end
 
 do
     local animDur = 0.12
+
+    local animShow = function(_,self)
+        self:ShowFinish()
+    end
     local animHide = function(_,self)
         self:SetVisible(false)
         if self.vg_mouseinput then
             self:SetMouseInputEnabled(false)
             gui.EnableScreenClicker(false)
         end
+        self:HideFinish()
     end
 
     function PANEL:Show()
         self:SetVisible(true)
         self:Stop()
-        self:AlphaTo(255, animDur)
+        self:AlphaTo(255, animDur, nil, animShow)
 
         if self.vg_mouseinput then
             self:SetMouseInputEnabled(true)
             gui.EnableScreenClicker(true)
         end
+
+        self:ShowStart()
     end
 
     function PANEL:Hide()
         self:Stop()
         self:AlphaTo(0, animDur, nil, animHide)
+        self:HideStart()
     end
+
+    function PANEL:ShowStart() end
+    function PANEL:ShowFinish() end
+    function PANEL:HideStart() end
+    function PANEL:HideFinish() end
 end
 
 vgui.Register("mgui_background", PANEL, "DPanel")
