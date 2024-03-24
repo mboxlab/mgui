@@ -33,7 +33,7 @@ do
         local r, g = math_Remap(bar, 0, w, 192, 128), math.Remap(bar, 0, w, 128, 192)
 
         for i = 1, 8 do
-            surface_SetDrawColor( r, g, math.min(r, g), i == 8 and 24 or 12 )
+            surface_SetDrawColor( r, g, math.min(r, g), i == 8 and 10 or 4 )
             surface_DrawRect( 
                 math_Remap( i, 1, 8, 0, ( w - w / 8 ) * bar / w ), 0, 
                 math_Remap( i, 1, 8, w, w / 8 ), h 
