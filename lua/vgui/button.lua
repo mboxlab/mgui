@@ -1,12 +1,12 @@
 local PANEL = {}
 
 function PANEL:Init()
-    self:SetMinimumSize( 64, 40 )
+    self:SetMinimumSize( 64, 24 )
 
     self:SetFont( "mgui_small" )
     self:SetTextColor( color_white )
 
-    self.vg_alpha, self.vg_bar = 0, 0
+    self.mg_alpha, self.mg_bar = 0, 0
 end
 
 do
@@ -18,15 +18,15 @@ do
 
     local math_Remap = math.Remap
 
-    function PANEL:Paint(w, h)
+    function PANEL:Paint( w, h )
         local isHovered = self:IsHovered()
         local frametime = RealFrameTime()
     
-        local alpha = Lerp( frametime * 8, self.vg_alpha, (isHovered and not self:IsDown()) and 64 or 40 )
-        self.vg_alpha = alpha
+        local alpha = Lerp( frametime * 8, self.mg_alpha, (isHovered and not self:IsDown()) and 64 or 40 )
+        self.mg_alpha = alpha
     
-        local bar = Lerp( frametime * 6, self.vg_bar, isHovered and w or 0 )
-        self.vg_bar = bar
+        local bar = Lerp( frametime * 6, self.mg_bar, isHovered and w or 0 )
+        self.mg_bar = bar
     
         surface_SetDrawColor( 128, 128, 128, alpha )
         surface_DrawRect( 0, 0, w, h )

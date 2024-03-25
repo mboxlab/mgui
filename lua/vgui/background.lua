@@ -1,6 +1,6 @@
 local PANEL = {}
 
-AccessorFunc( PANEL, "vg_mouseinput", "MouseInput", FORCE_BOOL )
+AccessorFunc( PANEL, "mg_mouseinput", "MouseInput", FORCE_BOOL )
 
 function PANEL:Init()
     self:SetSize(ScrW(), ScrH())
@@ -42,7 +42,7 @@ do
     end
     local animHide = function(_,self)
         self:SetVisible(false)
-        if self.vg_mouseinput then
+        if self.mg_mouseinput then
             self:SetMouseInputEnabled(false)
             gui.EnableScreenClicker(false)
         end
@@ -54,7 +54,7 @@ do
         self:Stop()
         self:AlphaTo(255, animDur, nil, animShow)
 
-        if self.vg_mouseinput then
+        if self.mg_mouseinput then
             self:SetMouseInputEnabled(true)
             gui.EnableScreenClicker(true)
         end
