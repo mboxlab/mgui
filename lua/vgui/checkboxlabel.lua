@@ -79,59 +79,44 @@ function PANEL:Toggle()
 end
 
 function PANEL:PerformLayout()
-
-	local x = self.m_iIndent || 0
+	local x = self.m_iIndent or 0
 
 	self.Button:SetSize( 15, 15 )
 	self.Button:SetPos( x, math.floor( ( self:GetTall() - self.Button:GetTall() ) / 2 ) )
 
 	self.Label:SizeToContents()
 	self.Label:SetPos( x + self.Button:GetWide() + 4, math.floor( ( self:GetTall() - self.Label:GetTall() ) / 2 ) )
-
 end
 
 function PANEL:SetTextColor( color )
-
 	self.Label:SetTextColor( color )
-
 end
 
 function PANEL:SizeToContents()
-
 	self:InvalidateLayout( true ) -- Update the size of the DLabel and the X offset
 	self:SetWide( self.Label.x + self.Label:GetWide() )
 	self:SetTall( math.max( self.Button:GetTall(), self.Label:GetTall() ) )
 	self:InvalidateLayout() -- Update the positions of all children
-
 end
 
 function PANEL:SetText( text )
-
 	self.Label:SetText( text )
 	self:SizeToContents()
-
 end
 
 function PANEL:SetFont( font )
-
 	self.Label:SetFont( font )
 	self:SizeToContents()
-
 end
 
 function PANEL:GetText()
-
 	return self.Label:GetText()
-
 end
 
 function PANEL:Paint( w, h )
 end
 
 function PANEL:OnChange( bVal )
-
-	-- For override
-
 end
 
 

@@ -4,6 +4,8 @@ AccessorFunc( PANEL, "mg_mouseinput", "MouseInput", FORCE_BOOL )
 
 function PANEL:Init()
     self:SetSize(ScrW(), ScrH())
+    self:SetAlpha(0)
+    self:Show()
 end
 
 do

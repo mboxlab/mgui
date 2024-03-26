@@ -16,19 +16,19 @@ surface.CreateFont("mgui_small", {
 	extended = true,
 } )
 
-if IsValid(ADAWDAWDAWDAWDAWADA) then
-	ADAWDAWDAWDAWDAWADA:Remove()
-end
+-- if IsValid(ADAWDAWDAWDAWDAWADA) then
+-- 	ADAWDAWDAWDAWDAWADA:Remove()
+-- end
 
-ADAWDAWDAWDAWDAWADA = vgui.Create("mgui_frame")
-ADAWDAWDAWDAWDAWADA:SetSize(512, 256)
-ADAWDAWDAWDAWDAWADA:MakePopup()
+-- ADAWDAWDAWDAWDAWADA = vgui.Create("mgui_frame")
+-- ADAWDAWDAWDAWDAWADA:SetSize(512, 256)
+-- ADAWDAWDAWDAWDAWADA:MakePopup()
 
-local awdwadaw1 = ADAWDAWDAWDAWDAWADA:Add("mgui_button")
-awdwadaw1:SetPos(16, 24 + 8)
+-- local awdwadaw1 = ADAWDAWDAWDAWDAWADA:Add("mgui_button")
+-- awdwadaw1:SetPos(16, 24 + 8)
 
-local awdwadaw2 = ADAWDAWDAWDAWDAWADA:Add("mgui_toggle")
-awdwadaw2:SetPos(16, 24 + 8 + awdwadaw1:GetTall() + 8)
+-- local awdwadaw2 = ADAWDAWDAWDAWDAWADA:Add("mgui_toggle")
+-- awdwadaw2:SetPos(16, 24 + 8 + awdwadaw1:GetTall() + 8)
 
-local awdwadaw3 = ADAWDAWDAWDAWDAWADA:Add("mgui_checkboxlabel")
-awdwadaw3:SetPos(16, 24 + 8 + awdwadaw1:GetTall() + 8 + awdwadaw2:GetTall() + 8)
+-- local awdwadaw3 = ADAWDAWDAWDAWDAWADA:Add("mgui_checkboxlabel")
+-- awdwadaw3:SetPos(16, 24 + 8 + awdwadaw1:GetTall() + 8 + awdwadaw2:GetTall() + 8)
