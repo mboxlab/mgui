@@ -38,6 +38,8 @@ do
         surface_SetDrawColor( 32, 32, 32, 240 )
         surface_DrawRect( 0, 0, w, h )
     end
+
+    PANEL.PaintOld = PANEL.Paint
 end
 
 do
