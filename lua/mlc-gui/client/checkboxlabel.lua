@@ -21,7 +21,7 @@
 
 --         self.Button.Paint = function( self, w, h )
 --             local frametime = RealFrameTime()
-        
+
 --             surface_SetDrawColor( 128, 128, 128, 40 )
 --             surface_DrawRect( 0, 0, w, h )
 
@@ -118,6 +118,5 @@
 
 -- function PANEL:OnChange( bVal )
 -- end
-
 
 -- vgui.Register("mgui_checkboxlabel", PANEL, "DPanel")
